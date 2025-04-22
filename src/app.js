@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 const cors = require('cors');
 app.use(cors());
 app.use("/api", require("./routers/admin.routes"));
-
+app.use(express.static("public"));
 
 // Connect to MongoDB
 connectDB();
