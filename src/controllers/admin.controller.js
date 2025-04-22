@@ -3,7 +3,7 @@ const AdminPage = require("../models/admin.model");
 // ✅ Get all admin page content
 exports.getAdminPage = async (req, res) => {
   try {
-    const page = await AdminPage.findOne();
+    const page = await AdminPage.find();
     res.status(200).json(page);
   } catch (err) {
     res.status(500).json({ error: "Server error", detail: err.message });
