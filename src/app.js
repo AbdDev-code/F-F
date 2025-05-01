@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const connectDB = require('./config/db');
 require('colors');
 require('dotenv').config();
 
@@ -13,8 +12,6 @@ app.use(cors());
 app.use("/api", require("./routers/admin.routes"));
 app.use(express.static("public/index.html"));
 
-// Connect to MongoDB
-connectDB();
 
 
 // start server 
